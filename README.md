@@ -27,8 +27,10 @@ Each experiment directory includes RTL code, testbenches, simulation waveforms, 
 
 - 📄 [Structural Model](Experiment-02-Multiplexer/mux4to1_structural.v)  
 - 📄 [Behavioral Model](Experiment-02-Multiplexer/mux4to1_behavioral.v)  
-- 🧪 [Testbench](Experiment-02-Multiplexer/mux_tb.v)  
-- 📘 [Report](Experiment-02-Multiplexer/report.pdf)  
+- 🧪 [Testbench](Experiment-02-Multiplexer/mux_tb.v)
+- 🖼️ [Schematic](Experiment-02-Y-Multiplexer/schematic.jpg)
+- 🖼️ [Simulation](Experiment-02-Y-Multiplexer/simulation.jpg)
+- 📘 [Report](Experiment-02-Multiplexer/report.md)  
 
 ---
 
@@ -36,8 +38,10 @@ Each experiment directory includes RTL code, testbenches, simulation waveforms, 
 
 - 📄 [Full Adder](Experiment-03-Ripple-Carry-Adder/full_adder.v)  
 - 📄 [Ripple Carry Adder](Experiment-03-Ripple-Carry-Adder/ripple_carry_adder.v)  
-- 🧪 [Testbench](Experiment-03-Ripple-Carry-Adder/rca_tb.v)  
-- 📘 [Report](Experiment-03-Ripple-Carry-Adder/report.pdf)
+- 🧪 [Testbench](Experiment-03-Ripple-Carry-Adder/rca_tb.v)
+- 🖼️ [Schematic](Experiment-03-Ripple-Carry-Adder/schematic.jpg)
+- 🖼️ [Simulation](Experiment-03-Ripple-Carry-Adder/simulation.jpg) 
+- 📘 [Report](Experiment-03-Ripple-Carry-Adder/report.md)
 
 ---
 
@@ -47,14 +51,14 @@ Each experiment directory includes RTL code, testbenches, simulation waveforms, 
 
 - 📄 [ALU Module](Experiment-04-4bit-ALU/alu.v)  
 - 🧪 [Testbench](Experiment-04-4bit-ALU/alu_tb.v)  
-- 📘 [Report](Experiment-04-4bit-ALU/report.pdf)
+- 📘 [Report](Experiment-04-4bit-ALU/report.md)
 
 ### **2-bit ALU (FPGA Implementation)**
 
 - 📄 [2-bit ALU Module](Experiment-05-2bit-ALU-FPGA/alu_2bit.v)  
 - 🧪 [Testbench](Experiment-05-2bit-ALU-FPGA/alu_2bit_tb.v)  
 - 📎 [Constraints File](Experiment-05-2bit-ALU-FPGA/xdc_constraints.xdc)  
-- 📘 [Report](Experiment-05-2bit-ALU-FPGA/report.pdf)
+- 📘 [Report](Experiment-05-2bit-ALU-FPGA/report.md)
 
 ---
 
@@ -64,7 +68,7 @@ Each experiment directory includes RTL code, testbenches, simulation waveforms, 
 
 - 📄 [SIPO Module](Experiment-06-SIPO-Shift-Register/sipo.v)  
 - 🧪 [Testbench](Experiment-06-SIPO-Shift-Register/sipo_tb.v)  
-- 📘 [Report](Experiment-06-SIPO-Shift-Register/report.pdf)
+- 📘 [Report](Experiment-06-SIPO-Shift-Register/report.md)
 
 ---
 
@@ -74,7 +78,7 @@ Each experiment directory includes RTL code, testbenches, simulation waveforms, 
 
 - 📄 [Shift Register Module](Experiment-07-Universal-Shift-Register/shift_register_74194.v)  
 - 🧪 [Testbench](Experiment-07-Universal-Shift-Register/shift_register_tb.v)  
-- 📘 [Report](Experiment-07-Universal-Shift-Register/report.pdf)
+- 📘 [Report](Experiment-07-Universal-Shift-Register/report.md)
 
 ---
 
@@ -84,7 +88,7 @@ Each experiment directory includes RTL code, testbenches, simulation waveforms, 
 
 - 📄 [Counter Module](Experiment-08-Ripple-Counter/ripple_counter.v)  
 - 🧪 [Testbench](Experiment-08-Ripple-Counter/ripple_counter_tb.v)  
-- 📘 [Report](Experiment-08-Ripple-Counter/report.pdf)
+- 📘 [Report](Experiment-08-Ripple-Counter/report.md)
 
 ---
  
