@@ -34,10 +34,6 @@ This experiment implements the 4×1 MUX using:
 | 1  | 1  | I3 |
 
 ### Structural Logic Expression
-\[
-Y = \overline{S1}\,\overline{S0}\,I0 + \overline{S1}\,S0\,I1 + S1\,\overline{S0}\,I2 + S1\,S0\,I3
-\]
-
 Structural modeling uses:
 - NOT gates  
 - AND gates  
