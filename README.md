@@ -28,8 +28,8 @@ Each experiment directory includes RTL code, testbenches, simulation waveforms, 
 - 📄 [Structural Model](Experiment-02-Multiplexer/mux4to1_structural.v)  
 - 📄 [Behavioral Model](Experiment-02-Multiplexer/mux4to1_behavioral.v)  
 - 🧪 [Testbench](Experiment-02-Multiplexer/mux_tb.v)
-- 🖼️ [Schematic](Experiment-02-Y-Multiplexer/schematic.jpg)
-- 🖼️ [Simulation](Experiment-02-Y-Multiplexer/simulation.jpg)
+- 🖼️ [Schematic](Experiment-02-Multiplexer/schematic.jpg)
+- 🖼️ [Simulation](Experiment-02-Multiplexer/simulation.jpg)
 - 📘 [Report](Experiment-02-Multiplexer/report.md)  
 
 ---
@@ -50,13 +50,17 @@ Each experiment directory includes RTL code, testbenches, simulation waveforms, 
 ### **4️⃣ 4-bit ALU**
 
 - 📄 [ALU Module](Experiment-04-4bit-ALU/alu.v)  
-- 🧪 [Testbench](Experiment-04-4bit-ALU/alu_tb.v)  
+- 🧪 [Testbench](Experiment-04-4bit-ALU/alu_tb.v)
+- 🖼️ [Schematic](Experiment-04-4bit-ALU/schematic.jpg)
+- 🖼️ [Simulation](Experiment-04-4bit-ALU/simulation.jpg) 
 - 📘 [Report](Experiment-04-4bit-ALU/report.md)
 
 ### **2-bit ALU (FPGA Implementation)**
 
 - 📄 [2-bit ALU Module](Experiment-05-2bit-ALU-FPGA/alu_2bit.v)  
-- 🧪 [Testbench](Experiment-05-2bit-ALU-FPGA/alu_2bit_tb.v)  
+- 🧪 [Testbench](Experiment-05-2bit-ALU-FPGA/alu_2bit_tb.v)
+- 🖼️ [Schematic](Experiment-05-2bit-ALU/schematic.jpg)
+- 🖼️ [Simulation](Experiment-05-2bit-ALU/simulation.jpg)  
 - 📎 [Constraints File](Experiment-05-2bit-ALU-FPGA/xdc_constraints.xdc)  
 - 📘 [Report](Experiment-05-2bit-ALU-FPGA/report.md)
 
@@ -67,7 +71,9 @@ Each experiment directory includes RTL code, testbenches, simulation waveforms, 
 ### **6️⃣ 4-bit Serial-In Parallel-Out (SIPO)**
 
 - 📄 [SIPO Module](Experiment-06-SIPO-Shift-Register/sipo.v)  
-- 🧪 [Testbench](Experiment-06-SIPO-Shift-Register/sipo_tb.v)  
+- 🧪 [Testbench](Experiment-06-SIPO-Shift-Register/sipo_tb.v)
+- 🖼️ [Schematic](Experiment-06-SIPO-Shift-Register/schematic.jpg)
+- 🖼️ [Simulation](Experiment-06-SIPO-Shift-Register/simulation.jpg) 
 - 📘 [Report](Experiment-06-SIPO-Shift-Register/report.md)
 
 ---
@@ -77,7 +83,9 @@ Each experiment directory includes RTL code, testbenches, simulation waveforms, 
 ### **7️⃣ IC 74194 Operations**
 
 - 📄 [Shift Register Module](Experiment-07-Universal-Shift-Register/shift_register_74194.v)  
-- 🧪 [Testbench](Experiment-07-Universal-Shift-Register/shift_register_tb.v)  
+- 🧪 [Testbench](Experiment-07-Universal-Shift-Register/shift_register_tb.v)
+- 🖼️ [Schematic](Experiment-07-Universal-Shift-Register/schematic.jpg)
+- 🖼️ [Simulation](Experiment-07-Universal-Shift-Register/simulation.jpg) 
 - 📘 [Report](Experiment-07-Universal-Shift-Register/report.md)
 
 ---
@@ -87,7 +95,9 @@ Each experiment directory includes RTL code, testbenches, simulation waveforms, 
 ### **8️⃣ 4-bit Ripple Counter (7473 JK FF)**
 
 - 📄 [Counter Module](Experiment-08-Ripple-Counter/ripple_counter.v)  
-- 🧪 [Testbench](Experiment-08-Ripple-Counter/ripple_counter_tb.v)  
+- 🧪 [Testbench](Experiment-08-Ripple-Counter/ripple_counter_tb.v)
+- 🖼️ [Schematic](Experiment-08-Ripple-Counter/schematic.jpg)
+- 🖼️ [Simulation](Experiment-08-Ripple-Counter/simulation.jpg) 
 - 📘 [Report](Experiment-08-Ripple-Counter/report.md)
 
 ---
@@ -108,9 +118,10 @@ The design is modeled exactly as per the datasheet timing diagrams and truth tab
 
 ### 📦 Files Included
 - 📄 [SN74x169 Verilog Module](Mini-Project-SN74x169/sn74x169.v)  
-- 🧪 [Testbench](Mini-Project-SN74x169/sn74x169_tb.v)  
+- 🧪 [Testbench](Mini-Project-SN74x169/sn74x169_tb.v)
+- 🖼️ [Simulation](Mini-Project-SN74x169/simulation.jpg) 
 - 📎 [Constraints File (FPGA)](Mini-Project-SN74x169/constraints.xdc)  
-- 📘 [Project Report](Mini-Project-SN74x169/project_report.pdf)
+- 📘 [Project Report](Mini-Project-SN74x169/project_report.md)
 
 ### 🧠 **FPGA Implementation**
 - Implemented and tested on Basys-3 / Nexys-A7  
