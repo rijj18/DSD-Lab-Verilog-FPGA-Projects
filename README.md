@@ -16,7 +16,9 @@ Each experiment directory includes RTL code, testbenches, simulation waveforms, 
 - 📄 [Structural Model](Experiment-01-Y-Expression/structural_model.v)  
 - 📄 [Behavioral Model](Experiment-01-Y-Expression/behavioral_model.v)  
 - 🧪 [TB (Structural)](Experiment-01-Y-Expression/tb_structural.v)  
-- 🧪 [TB (Behavioral)](Experiment-01-Y-Expression/tb_behavioral.v)  
+- 🧪 [TB (Behavioral)](Experiment-01-Y-Expression/tb_behavioral.v)
+- 🖼️ [Schematic](Experiment-01-Y-Expression/schematic.jpg)
+- 🖼️ [Simulation](Experiment-01-Y-Expression/simulation.jpg)
 - 📘 [Report](Experiment-01-Y-Expression/report.pdf)  
 
 ---
