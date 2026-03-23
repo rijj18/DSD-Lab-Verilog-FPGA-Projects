@@ -10,7 +10,6 @@ Each experiment directory includes RTL code, testbenches, simulation waveforms, 
 ## 🔬 **List of Experiments**
 
 
----
 
 ### **2️⃣ Multiplexers – 4-to-1 MUX**
 
