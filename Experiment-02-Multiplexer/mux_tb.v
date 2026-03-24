@@ -1,11 +1,11 @@
 `timescale 1ns/1ps
 
-module tb_MUX4x1_;
+module tb_mux4x1_;
 
     reg [3:0] I;
     reg [1:0] S;
     wire Y;
-    MUX4x1 uut (
+    mux4x1 uut (
         .I(I),
         .S(S),
         .Y(Y)
