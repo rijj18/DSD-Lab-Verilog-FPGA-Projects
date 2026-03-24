@@ -43,8 +43,8 @@ Converts a 4-bit binary input into corresponding signals to drive a 7-segment di
 📂 **Files:**
 - 🔗 [Verilog Code](Experiment-03-7Segment/bin_to_7seg.v)
 - 🔗 [Testbench](Experiment-03-7Segment/tb.v)
-- 🖼️ [Simulation Output](Experiment-03-7Segment/simulation.jpg)
-- 🖼️ [Schematic Output](Experiment-03-7Segment/schematic.jpg)
+- 🖼️ [Simulation Output](Experiment-03-7Segment/simulation.jpeg)
+- 🖼️ [Schematic Output](Experiment-03-7Segment/schematic.jpeg)
 - 📄 [Report](Experiment-03-7Segment/report.md)
   
 🧠 **Concept:**  
