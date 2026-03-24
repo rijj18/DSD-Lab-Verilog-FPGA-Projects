@@ -1,3 +1,4 @@
+//strutural is using gates and making the circuit
 module MUX4x1_structural(
     input [3:0] I,
     input [1:0] S,
