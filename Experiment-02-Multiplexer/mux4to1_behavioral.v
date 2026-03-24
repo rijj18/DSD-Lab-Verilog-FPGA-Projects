@@ -1,4 +1,4 @@
-module MUX4x1(
+module mux4x1(
     input [3:0] I,
     input [1:0] S,
     output reg Y
