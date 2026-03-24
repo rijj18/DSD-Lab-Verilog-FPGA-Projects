@@ -23,7 +23,7 @@ Behavioral and structural modeling implemented.
 
 📂 View Implementation:
 
-* 🔗 [MUX 4:1](./1_Combinational_Circuits/Multiplexer/)
+* 🔗 [MUX 4:1](./1_Combinational_Circuits/Multiplexers/MUX_4to1/)
 
 ---
 
