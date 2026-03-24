@@ -6,15 +6,15 @@ This project implements a **4-bit Up Counter** using Verilog HDL.
 
 The counter increments on every clock pulse and supports:
 
-* **Asynchronous Reset** (clears counter)
-* **Synchronous Load** (loads custom value)
+* Asynchronous Reset
+* Load operation for custom values
 
 ---
 
 ## 📥 Inputs
 
 * `clk` → Clock signal
-* `rst` → Reset signal (active HIGH)
+* `rst` → Reset signal
 * `ld` → Load enable
 * `ldvalue[3:0]` → Value to load
 
@@ -28,56 +28,45 @@ The counter increments on every clock pulse and supports:
 
 ## ⚙️ Working Principle
 
-* On rising edge of `clk`:
-
-  * If `rst = 1` → counter resets to `0000`
-  * Else if `ld = 1` → loads `ldvalue`
-  * Else → increments by 1
-
----
-
-## 🔢 State Transition
-
-| Clock Pulse | Output (Q3 Q2 Q1 Q0) |
-| ----------- | -------------------- |
-| 0           | 0000                 |
-| 1           | 0001                 |
-| 2           | 0010                 |
-| 3           | 0011                 |
-| ...         | ...                  |
-| 15          | 1111                 |
-| Next        | 0000                 |
+* If `rst = 1` → counter resets to `0000`
+* Else if `ld = 1` → loads given value
+* Else → increments on each clock
 
 ---
 
 ## 📂 Project Files
 
-* 🔗 [Verilog Code](./upcount.v)
-* 🔗 [Testbench](./upcount_tb.v)
-* 🔗 [Report](./report.md)
+* 🔗 [Verilog Code](./up_counter.v)
+* 🔗 [Testbench](./tb.v)
+* 🖼️ [Simulation Output](./counter_stimulation.jpeg)
+* 🖼️ [Schematic](./count_schematic.jpeg)
 
 ---
 
 ## 📊 Result
 
-* Counter increments correctly on each clock cycle
-* Load functionality verified
-* Reset behavior works as expected
+* Counter increments correctly
+* Load and reset functionality verified
 
 ---
 
-## 🖼️ Simulation Output
+## 🖼️ Outputs
 
-![Simulation](./simulation.jpg)
+### 🔍 Simulation
+
+![Simulation](./counter_stimulation.jpeg)
+
+### 🔧 Schematic
+
+![Schematic](./count_schematic.jpeg)
 
 ---
 
 ## 🧠 Applications
 
 * Digital counters
+* Timers
 * Frequency division
-* Timers and clocks
-* Embedded systems
 
 ---
 
@@ -85,3 +74,5 @@ The counter increments on every clock pulse and supports:
 
 * [⬅ Back to Counters](../README.md)
 * [⬅ Back to Main README](../../../README.md)
+
+  
