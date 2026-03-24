@@ -14,7 +14,7 @@ module bin_7seg(
     4'b0110:sout=7'b1011111;
     4'b0111:sout=7'b1110000;
     4'b1000:sout=7'b1111111;
-    4'b1111:sout=7'b1111011;
+    4'b1001:sout=7'b1111011;
     default:sout=7'b0000000;
     endcase 
     end 
