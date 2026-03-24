@@ -1,136 +1,137 @@
-# 🧪 Verilog FPGA Lab Experiments
+# Verilog FPGA Lab Experiments
 
-A comprehensive collection of **Digital System Design (DSD) experiments** implemented using **Verilog HDL**.  
-All designs are modeled, simulated, and verified using **Xilinx Vivado**, with selected modules deployed on **FPGA hardware**.
+A comprehensive collection of **Digital System Design (DSD)** experiments implemented using **Verilog HDL**.
+All designs are modeled, simulated, and verified using **Xilinx Vivado**, with selected modules deployed on **FPGA hardware (Basys-3 / Nexys A7)**.
 
 ---
 
 ## 🚀 Key Highlights
 
-- ✅ RTL Design using Verilog HDL  
-- ✅ Functional Simulation & Waveform Analysis  
-- ✅ FPGA Implementation (Basys-3 / Nexys A7)  
-- ✅ Testbench-based Verification  
-- ✅ Datasheet-based Digital IC Modeling  
+* RTL Design using Verilog HDL
+* Functional Simulation & Waveform Analysis
+* FPGA Implementation (Basys-3 / Nexys A7)
+* Testbench-based Verification
+* Datasheet-based Digital IC Modeling
 
 ---
 
-## 🔬 Experiments
+## 🔷 Combinational Circuits
 
-### 1. Multiplexers – 4-to-1 MUX
-📂 Files:
-- 🔗 [Behavioral Model](Experiment-02-Multiplexer/mux4to1_behavioral.v)
-- 🔗 [Structural Model](Experiment-02-Multiplexer/mux4to1_structural.v)
-- 🔗 [Testbench](Experiment-02-Multiplexer/mux_tb.v)
-- 📄 [Report](Experiment-02-Multiplexer/report.md)
-- 🖼️ [Schematic](Experiment-02-Multiplexer/schematic.jpg)
-- 🖼️ [Simulation](Experiment-02-Multiplexer/simulation.jpg)
+### Multiplexers – 4-to-1 MUX
 
----
+Behavioral and structural modeling implemented.
 
-### 2. Ripple Carry Adder
-- 📄 Full Adder  
-- 📄 Ripple Carry Adder  
-- 🧪 Testbench  
-- 🖼️ Schematic & Simulation  
-- 📘 Report  
+📂 View Implementation:
+
+* 🔗 [MUX 4:1](./1_Combinational_Circuits/Multiplexers/MUX_4to1/)
 
 ---
 
-### 3. Binary to 7-segment converter
-📖 **Description:**  
-Converts a 4-bit binary input into corresponding signals to drive a 7-segment display (0–9)
-📂 **Files:**
-- 🔗 [Verilog Code](Experiment-03-7Segment/bin_to_7seg.v)
-- 🔗 [Testbench](Experiment-03-7Segment/tb.v)
-- 🖼️ [Simulation Output](Experiment-03-7Segment/simulation.jpeg)
-- 🖼️ [Schematic Output](Experiment-03-7Segment/schematic.jpeg)
-- 📄 [Report](Experiment-03-7Segment/report.md)
-  
-🧠 **Concept:**  
+### Ripple Carry Adder
+
+Includes Full Adder and multi-bit Ripple Carry Adder design.
+
+📂 View Implementation:
+
+* 🔗 [Adders](./1_Combinational_Circuits/Adders/)
+
+---
+
+### Binary to 7-Segment Converter
+
+Converts a 4-bit binary input into signals to drive a 7-segment display (0–9).
+
+🧠 Concept:
 Each binary input activates specific segments (a–g) to display decimal digits.
-  
+
+📂 View Implementation:
+
+* 🔗 [7-Segment Design](./1_Combinational_Circuits/Display_Circuits/)
 
 ---
 
-### 4. Arithmetic Logic Unit (ALU)
+## 🔷 Sequential Circuits
 
-#### 4.1 4-bit ALU
-- 📄 ALU Module  
-- 🧪 Testbench  
-- 🖼️ Schematic & Simulation  
-- 📘 Report  
+### Shift Registers
 
-#### 4.2 2-bit ALU (FPGA Implementation)
-- 📄 ALU Module  
-- 🧪 Testbench  
-- 🖼️ Schematic & Simulation  
-- 📎 Constraints File  
-- 📘 Report  
+* 4-bit SIPO (Serial-In Parallel-Out)
+* Universal Shift Register (74194)
+
+📂 View:
+
+* 🔗 [Shift Registers](./2_Sequential_Circuits/Shift_Registers/)
 
 ---
 
-### 5. Shift Registers
+### Counters
 
-#### 5.1 4-bit SIPO (Serial-In Parallel-Out)
-- 📄 Module  
-- 🧪 Testbench  
-- 🖼️ Schematic & Simulation  
-- 📘 Report  
+* 4-bit Ripple Counter (7473 JK Flip-Flop)
 
-#### 5.2 Universal Shift Register (74194)
-- 📄 Module  
-- 🧪 Testbench  
-- 🖼️ Schematic & Simulation  
-- 📘 Report  
+📂 View:
+
+* 🔗 [Counters](./2_Sequential_Circuits/Counters/)
 
 ---
 
-### 6. Counters
+## 🔷 Advanced Designs
 
-#### 6.1 4-bit Ripple Counter (7473 JK FF)
-- 📄 Module  
-- 🧪 Testbench  
-- 🖼️ Schematic & Simulation  
-- 📘 Report  
+### Arithmetic Logic Unit (ALU)
+
+#### 4-bit ALU
+
+* Functional simulation and verification
+
+#### 2-bit ALU (FPGA Implementation)
+
+* Implemented on FPGA hardware
+* Includes constraints file
+
+📂 View Implementation:
+
+* 🔗 [ALU](./3_Advanced_Designs/ALU/)
 
 ---
 
-### 6. 🎯 Mini Project – SN74x169 Counter
+## 🎯 Mini Project – SN74x169 Counter
 
-A fully synchronous, presettable **4-bit up/down binary counter** modeled using Verilog.
+A fully synchronous, presettable 4-bit up/down binary counter modeled using Verilog.
 
-#### ✔ Features
-- 🔼 Up/Down Counting  
-- ⏳ Synchronous Load  
-- 📴 Asynchronous Clear  
-- 🔁 Carry/Borrow Support  
+### ✔ Features
 
-#### 📦 Files
-- 📄 Verilog Module  
-- 🧪 Testbench  
-- 🖼️ Simulation  
-- 📎 Constraints File  
-- 📘 Report  
+* Up/Down Counting
+* Synchronous Load
+* Asynchronous Clear
+* Carry/Borrow Support
 
-#### 🧠 FPGA Implementation
-- ✔ Tested on Basys-3 / Nexys A7  
-- ✔ Output verified via LEDs  
+### 🧠 FPGA Implementation
+
+* Tested on Basys-3 / Nexys A7
+* Output verified via onboard LEDs
+
+📂 Project Files:
+
+* 🔗 [SN74x169 Counter](./4_Mini_Projects/SN74x169/)
 
 ---
 
 ## 🛠 Tools & Technologies
 
-- 🔧 Xilinx Vivado  
-- 💻 Verilog HDL  
-- 🔌 FPGA (Artix-7 based boards)  
-- 📊 Simulation Waveforms  
-- 📄 Datasheet-based Design  
+* Xilinx Vivado
+* Verilog HDL
+* FPGA (Artix-7 based boards)
+* Simulation Waveforms
+* Datasheet-based Design
 
 ---
 
 ## 📌 Author
 
-**Rijul Sharma**  
-Electronics & Communication Engineering (ECE)  
-Passionate about **Digital Design, FPGA & Embedded Systems**
+**Rijul Sharma**
+Electronics & Communication Engineering (ECE)
+
+Passionate about:
+
+* Digital Design
+* FPGA Development
+* Embedded Systems
+
