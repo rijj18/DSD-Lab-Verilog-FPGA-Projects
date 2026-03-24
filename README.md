@@ -18,11 +18,13 @@ All designs are modeled, simulated, and verified using **Xilinx Vivado**, with s
 ## 🔬 Experiments
 
 ### 1. Multiplexers – 4-to-1 MUX
-- 📄 Structural Model  
-- 📄 Behavioral Model  
-- 🧪 Testbench  
-- 🖼️ Schematic & Simulation  
-- 📘 Report  
+📂 Files:
+- 🔗 [Behavioral Model](Experiment-02-Multiplexer/mux4to1_behavioral.v)
+- 🔗 [Structural Model](Experiment-02-Multiplexer/mux4to1_structural.v)
+- 🔗 [Testbench](Experiment-02-Multiplexer/mux_tb.v)
+- 📄 [Report](Experiment-02-Multiplexer/report.md)
+- 🖼️ [Schematic](Experiment-02-Multiplexer/schematic.jpg)
+- 🖼️ [Simulation](Experiment-02-Multiplexer/simulation.jpg)
 
 ---
 
