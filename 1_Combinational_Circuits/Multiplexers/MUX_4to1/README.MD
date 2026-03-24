@@ -41,7 +41,7 @@ Two modeling approaches are used:
 * 🔗 [Behavioral Code](./mux4to1_behavioral.v)
 * 🔗 [Structural Code](./structural.v)
 * 🔗 [Testbench](./mux_tb.v)
-* 🔗 [Report](./report.md)
+
 
 ---
 
