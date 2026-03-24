@@ -64,13 +64,11 @@ Each binary input activates specific segments (a–g) to display decimal digits.
 ---
 
 ### Counters
-
-* 4-bit Ripple Counter (7473 JK Flip-Flop)
-
 📂 View:
 
-* 🔗 [Counters](./2_Sequential_Circuits/Counters/)
-
+* 🔗 [UP Counter](./2_Sequential_Circuits/Counters/)
+* 🔗 [RING Counter](./2_Sequential_Circuits/Counters/)
+* 🔗 [Johnson Counter](./2_Sequential_Circuits/Counters/)
 ---
 
 ## 🔷 Advanced Designs
