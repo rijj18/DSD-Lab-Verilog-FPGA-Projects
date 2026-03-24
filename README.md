@@ -46,7 +46,7 @@ Each binary input activates specific segments (a–g) to display decimal digits.
 
 📂 View Implementation:
 
-* [7-Segment](./Experiment-03-7Segment/)
+* 🔗 [7-Segment Design](./3_Combinational_Circuits/Display_Circuits/Binary_to_7Segment/)
 
 ---
 
