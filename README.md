@@ -23,7 +23,7 @@ Behavioral and structural modeling implemented.
 
 📂 View Implementation:
 
-* 🔗 [MUX 4:1](./1_Combinational_Circuits/Multiplexers/MUX_4to1/)
+* 🔗 [MUX 4:1](./Experiment-02-Multiplexer/)
 
 ---
 
@@ -46,7 +46,7 @@ Each binary input activates specific segments (a–g) to display decimal digits.
 
 📂 View Implementation:
 
-* 🔗 [7-Segment Design](./1_Combinational_Circuits/Display_Circuits/)
+* [7-Segment](./Experiment-03-7Segment/)
 
 ---
 
