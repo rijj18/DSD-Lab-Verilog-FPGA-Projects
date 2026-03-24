@@ -37,15 +37,31 @@ All designs are modeled, simulated, and verified using **Xilinx Vivado**, with s
 
 ---
 
-### 3. Arithmetic Logic Unit (ALU)
+### 3. Binary to 7-segment converter
+📖 **Description:**  
+Converts a 4-bit binary input into corresponding signals to drive a 7-segment display (0–9)
+📂 **Files:**
+- 🔗 [Verilog Code](Experiment-03-7Segment/bin_to_7seg.v)
+- 🔗 [Testbench](Experiment-03-7Segment/tb.v)
+- 🖼️ [Simulation Output](Experiment-03-7Segment/simulation.jpg)
+- 🖼️ [Schematic Output](Experiment-03-7Segment/schematic.jpg)
+- 📄 [Report](Experiment-03-7Segment/report.md)
+  
+🧠 **Concept:**  
+Each binary input activates specific segments (a–g) to display decimal digits.
+  
 
-#### 3.1 4-bit ALU
+---
+
+### 4. Arithmetic Logic Unit (ALU)
+
+#### 4.1 4-bit ALU
 - 📄 ALU Module  
 - 🧪 Testbench  
 - 🖼️ Schematic & Simulation  
 - 📘 Report  
 
-#### 3.2 2-bit ALU (FPGA Implementation)
+#### 4.2 2-bit ALU (FPGA Implementation)
 - 📄 ALU Module  
 - 🧪 Testbench  
 - 🖼️ Schematic & Simulation  
@@ -54,15 +70,15 @@ All designs are modeled, simulated, and verified using **Xilinx Vivado**, with s
 
 ---
 
-### 4. Shift Registers
+### 5. Shift Registers
 
-#### 4.1 4-bit SIPO (Serial-In Parallel-Out)
+#### 5.1 4-bit SIPO (Serial-In Parallel-Out)
 - 📄 Module  
 - 🧪 Testbench  
 - 🖼️ Schematic & Simulation  
 - 📘 Report  
 
-#### 4.2 Universal Shift Register (74194)
+#### 5.2 Universal Shift Register (74194)
 - 📄 Module  
 - 🧪 Testbench  
 - 🖼️ Schematic & Simulation  
@@ -70,9 +86,9 @@ All designs are modeled, simulated, and verified using **Xilinx Vivado**, with s
 
 ---
 
-### 5. Counters
+### 6. Counters
 
-#### 5.1 4-bit Ripple Counter (7473 JK FF)
+#### 6.1 4-bit Ripple Counter (7473 JK FF)
 - 📄 Module  
 - 🧪 Testbench  
 - 🖼️ Schematic & Simulation  
