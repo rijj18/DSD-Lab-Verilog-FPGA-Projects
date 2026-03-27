@@ -15,7 +15,7 @@ A priority encoder outputs the **binary index of the highest-priority input** th
 
 ### 🔧 Design Files
 
-* 👉 [If-Else RTL Design](./8x3_encoder.v)
+* 👉 [CASEZ RTL Design](./8x3_encoder.v)
 * 👉 [Loop-Based Optimized Design](./encoder_loop.v)
 
 ### 🧪 Verification
@@ -45,22 +45,7 @@ A priority encoder outputs the **binary index of the highest-priority input** th
 
 ## 🧠 Design Approaches Explained
 
-### 🔹 1. If-Else Method
-
-* Uses **priority chain**
-* Simple and easy to understand
-* Best for beginners
-
-👉 [View Code](./8x3_encoder.v)
-
-💡 Logic:
-
-* Check from `y7 → y0`
-* First HIGH input is selected
-
----
-
-### 🔹 2. Case-Based Method (`casez`)
+### 🔹 1. Case-Based Method (`casez`)
 
 * Uses **don't care (`?`) conditions**
 * Compact representation
