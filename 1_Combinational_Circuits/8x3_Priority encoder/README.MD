@@ -2,166 +2,104 @@
 
 ## 📌 Overview
 
-This project implements an **8-to-3 Priority Encoder** using Verilog HDL.
-A priority encoder converts multiple input signals into a binary output, giving **priority to the highest-order input**.
+This project implements an **8-to-3 Priority Encoder** using Verilog HDL with multiple design styles.
 
-* Highest priority → **y7**
-* Lowest priority → **y0**
+A priority encoder outputs the **binary index of the highest-priority input** that is HIGH.
+
+* Highest Priority → `y7`
+* Lowest Priority → `y0`
+
+---
+
+## 📂 Project Navigation (Click to Open)
+
+### 🔧 Design Files
+
+* 👉 [If-Else RTL Design](./8x3_encoder.v)
+* 👉 [Loop-Based Optimized Design](./encoder_loop.v)
+
+### 🧪 Verification
+
+* 👉 [Testbench](./encoder_tb.v)
+
+### 📸 Outputs & Diagrams
+
+* 👉 [Simulation Waveform](./encoder_simulation.jpeg)
+* 👉 [Schematic Diagram](./encoder_schematic.jpeg)
 
 ---
 
 ## ⚙️ Functionality
 
-* **Inputs:** `y[7:0]`
-* **Outputs:**
+| Input (y[7:0]) | Output (a) | Valid (d) |
+| -------------- | ---------- | --------- |
+| 00000000       | 000        | 0         |
+| 1xxxxxxx       | 111        | 1         |
+| 01xxxxxx       | 110        | 1         |
+| 001xxxxx       | 101        | 1         |
 
-  * `a[2:0]` → Encoded output
-  * `d` → Valid bit
-
-### ✔️ Working:
-
-* If multiple inputs are HIGH → highest priority input is selected
-* If all inputs are LOW → `d = 0` (invalid)
-
----
-
-## 📊 Truth Table (Simplified)
-
-| Input Condition | Output (a) | d |
-| --------------- | ---------- | - |
-| 00000000        | 000        | 0 |
-| 1xxxxxxx (y7)   | 111        | 1 |
-| 01xxxxxx (y6)   | 110        | 1 |
-| 001xxxxx (y5)   | 101        | 1 |
-| ...             | ...        | 1 |
+✔ If multiple inputs are HIGH → highest priority is selected
+✔ If all inputs are LOW → output is invalid (`d = 0`)
 
 ---
 
-## 🧠 Design Approaches
+## 🧠 Design Approaches Explained
 
-### 1️⃣ Behavioral (if-else)
+### 🔹 1. If-Else Method
 
-* Simple and intuitive
-* Clearly shows priority
+* Uses **priority chain**
+* Simple and easy to understand
+* Best for beginners
 
-### 2️⃣ Case-based (`casez`)
+👉 [View Code](./8x3_encoder.v)
 
-* Uses don’t-care (`?`)
-* Compact and synthesizable
+💡 Logic:
 
-### 3️⃣ Loop-based (Optimized ⭐)
+* Check from `y7 → y0`
+* First HIGH input is selected
 
-* Scalable and clean
+---
+
+### 🔹 2. Case-Based Method (`casez`)
+
+* Uses **don't care (`?`) conditions**
+* Compact representation
+* Must be written carefully to preserve priority
+
+💡 Key Point:
+
+> Order of patterns defines priority
+
+---
+
+### 🔹 3. Loop-Based Method ⭐ (Best)
+
+* Uses **for loop**
+* Scalable for larger encoders (16, 32 inputs)
 * Industry-preferred approach
 
----
+👉 [View Code](./encoder_loop.v)
 
-## 🚀 Verilog Implementation
+💡 Logic:
 
-### 🔹 Optimized Loop-Based Design
-
-```verilog
-module priority_encoder_8to3 (
-    input  [7:0] y,
-    output reg [2:0] a,
-    output reg d
-);
-
-integer i;
-
-always @(*) begin
-    a = 3'b000;
-    d = 1'b0;
-
-    for (i = 7; i >= 0; i = i - 1) begin
-        if (y[i] && !d) begin
-            a = i[2:0];
-            d = 1'b1;
-        end
-    end
-end
-
-endmodule
-```
+* Scan from MSB → LSB
+* Stop at first HIGH input
 
 ---
 
-## 🧪 Testbench
+## 🧪 Simulation Result
 
-```verilog
-module tb_priority_encoder;
+![Simulation Output](./encoder_simulation.jpeg)
 
-reg [7:0] y;
-wire [2:0] a;
-wire d;
-
-priority_encoder_8to3 uut (
-    .y(y),
-    .a(a),
-    .d(d)
-);
-
-initial begin
-    $monitor("y=%b a=%b d=%b", y, a, d);
-
-    y = 8'b00000000; #10;
-    y = 8'b00000001; #10;
-    y = 8'b00000100; #10;
-    y = 8'b10000000; #10;
-    y = 8'b10101010; #10;
-
-    $finish;
-end
-
-endmodule
-```
+✔ Verifies correct priority selection
+✔ Shows valid bit behavior
 
 ---
 
-## 📈 Expected Output
+## 🔧 Schematic Diagram
 
-* For `y = 10101010` → Output: `a = 111`, `d = 1`
-* For `y = 00111000` → Output: `a = 101`, `d = 1`
+![Schematic](./encoder_schematic.jpeg)
 
----
+✔ Represents hardware-level implementation
 
-## 📁 Suggested Folder Structure
 
-```
-📦 Priority-Encoder
- ┣ 📂 combinational
- ┃ ┗ 📂 priority_encoder
- ┃   ┣ 📜 priority_encoder_8to3.v
- ┃   ┣ 📜 tb_priority_encoder.v
- ┃   ┗ 📜 README.md
-```
-
----
-
-## 💡 Key Learnings
-
-* Priority logic using **if-else vs case**
-* Importance of **don’t-care conditions**
-* Writing **synthesizable combinational logic**
-* Efficient design using **loops**
-
----
-
-## 🎯 Why This Project Matters
-
-* Fundamental digital design concept
-* Frequently asked in **interviews & viva**
-* Demonstrates clean RTL coding practices
-
----
-
-## 👨‍💻 Author
-
-**Rijul Sharma**
-Electronics & Communication Engineering (ECE)
-
----
-
-## ⭐ Tip
-
-Add waveform screenshots from tools like **ModelSim / GTKWave** to make your repo more impressive.
