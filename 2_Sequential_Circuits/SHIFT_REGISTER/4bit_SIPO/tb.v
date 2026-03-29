@@ -4,7 +4,7 @@ reg clk, rst, sin;
   siso uut (
     .clk(clk),
     .rst(rst),
-    .si(sin),
+    .sin(sin),
     .q(q)
 );
 always #5 clk = ~clk;
@@ -17,10 +17,10 @@ initial begin
     #10 rst = 0;
 
     // Apply serial input
-    #10 si = 1;
-    #10 si = 0;
-    #10 si = 1;
-    #10 si = 1;
+    #10 sin = 1;
+    #10 sin = 0;
+    #10 sin = 1;
+    #10 sin= 1;
 
     #50 $finish;
 end
