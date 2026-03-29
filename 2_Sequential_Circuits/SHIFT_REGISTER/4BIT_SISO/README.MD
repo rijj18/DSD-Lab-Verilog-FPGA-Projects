@@ -31,44 +31,6 @@ shift_reg <= {shift_reg[2:0], si};
 ### 🔹 RTL Code
 
 👉 [View Code](./4BIT_SISO.v)
-
-#### Key Parts:
-
-**Register Declaration**
-
-```
-reg [3:0] shift_reg;
-```
-
-**Always Block**
-
-```
-always @(posedge clk or posedge rst)
-```
-
-* Executes on clock edge or reset
-
-**Reset Condition**
-
-```
-if (rst)
-    shift_reg <= 4'b0000;
-```
-
-**Shift Operation**
-
-```
-shift_reg <= {shift_reg[2:0], si};
-```
-
-**Output**
-
-```
-assign so = shift_reg[3];
-```
-
-👉 Output is taken from MSB
-
 ---
 
 ## 🧪 4. Simulation Result
