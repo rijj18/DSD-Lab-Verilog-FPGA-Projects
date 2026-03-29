@@ -3,39 +3,43 @@
 ## 📌 Problem Statement
 
 Design a **4-bit Serial-In Parallel-Out (SIPO) Shift Register** using Verilog HDL.
-The circuit converts serial input data into parallel output after successive clock cycles.
+The system converts serial input data into parallel output after successive clock cycles.
 
 ---
 
 ## 🧠 Design Approach
 
-A SIPO shift register uses **4 D Flip-Flops** connected in series.
+A SIPO shift register consists of **4 D Flip-Flops** connected in series.
 
-* On each clock edge:
+* On each clock pulse:
 
-  * New data enters from serial input (`din`)
-  * Existing data shifts right
-* After 4 cycles → full 4-bit output is available
+  * Serial input (`din`) enters the first stage
+  * Data shifts through flip-flops
+* After 4 clock cycles → full 4-bit output is available
 
-```
+---
 
-## 🧪 Testbench Code
+## 💻 Code Files
 
-👉 [View Testbench File](./tb/tb.v)
+👉 **Verilog Design:**
+[View SIPO Design](./4BIT_SIPO.v)
 
+👉 **Testbench:**
+[View Testbench](./tb.v)
 
+---
 
 ## 🧪 Simulation Result
 
 ### Input Sequence
 
-```text
+```
 1 → 0 → 1 → 1
 ```
 
 ### Output Progression
 
-```text
+```
 Clock 1 → 0001  
 Clock 2 → 0010  
 Clock 3 → 0101  
@@ -50,11 +54,11 @@ Clock 4 → 1011
 
 ### 🔹 RTL Schematic
 
-![RTL Schematic](docs/sipo_schematic.png)
+![RTL Schematic](sipo_schematic.png)
 
 ### 🔹 Simulation Waveform
 
-![Simulation Waveform](docs/sipo_simulation.png)
+![Simulation Waveform](sipo_simulation.png)
 
 ---
 
@@ -62,21 +66,21 @@ Clock 4 → 1011
 
 * Sequential circuit design
 * Shift register operation
-* Testbench verification
-* Clean project structuring
+* Clock-driven data movement
+* Testbench-based verification
 
 ---
 
 ## 🎯 Applications
 
-* Serial-to-parallel conversion
+* Serial-to-parallel data conversion
 * Communication systems
-* Data storage
+* Digital storage
 
 ---
 
 ## 🏁 Conclusion
 
-This project demonstrates a fundamental sequential circuit and forms a base for advanced digital designs.
+This project demonstrates a fundamental sequential circuit and builds a strong base for advanced digital system design.
 
 ---
