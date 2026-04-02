@@ -13,7 +13,7 @@ module mealy(
     else
     state<=nstate;
     end
-    always@(state)
+    always@(*)
     begin
     case(state)
     idle:begin
@@ -31,11 +31,11 @@ module mealy(
   default:dout=1'b0;
   endcase
   end
-  always@(state,din)
+    always@(*)
     begin
     case(state)
     idle:begin
-    if(rst)
+        if(din)
     nstate=idle;
     else
     nstate=s0;
