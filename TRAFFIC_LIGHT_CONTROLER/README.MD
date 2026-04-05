@@ -1,124 +1,138 @@
-# 🚦 Traffic Light Controller using Verilog (FSM Based Design)
+# 🚦 Traffic Light Controller using Verilog (FSM-Based Design)
 
 ## 📌 Overview
 
-This project implements a **Traffic Light Controller** using **Finite State Machine (FSM)** in Verilog.
-The design is fully **synthesizable** and avoids the use of `#delay`, making it suitable for **FPGA implementation**.
+This project implements a **Traffic Light Controller** using a **Finite State Machine (FSM)** in Verilog HDL.
+The design follows **synthesizable hardware practices** by avoiding `#delay` and instead using a **clock-driven counter** for timing control.
 
 ---
 
 ## 🎯 Objectives
 
-* Design a **3-state traffic light system** (RED,YELLOW,GREEN)
+* Design a **3-state traffic light system**
 * Implement **FSM-based control logic**
-* Use a **counter for timing control**
-* Verify functionality using **testbench simulation**
-
----
-
-## 🧠 Design Approach
-
-The system is divided into two main blocks:
-
-### 🔹 1. Sequential Block (State Register)
-
-* Updates state on clock edge
-* Handles reset condition
-* Maintains timing using a counter
-
-### 🔹 2. Combinational Block (Next State Logic)
-
-* Determines next state based on:
-
-  * Current state
-  * Counter value
-* Generates output signals (r, y ,g)
+* Use **clock + counter for delay generation**
+* Validate functionality using simulation
 
 ---
 
 ## 🔄 State Transition
 
-```text
+```text id="2g9d7r"
 RED → YELLOW → GREEN → RED
 ```
 
 | State  | Output |
 | ------ | ------ |
 | RED    | r = 1  |
-| YELLOW  | y = 1  |
-| GREEN | g = 1  |
+| YELLOW | y = 1  |
+| GREEN  | g = 1  |
 
 ---
 
-## ⏱ Timing Control
+## 🧠 Design Architecture
 
-* Implemented using a **4-bit counter**
-* Each state holds for a fixed number of clock cycles
-* GREEN state has shorter duration (real-world behavior)
+### 🔹 FSM Modeling
 
----
+* The controller is implemented using **3 states**:
 
-## 📂 Project Structure
+  * `RED`
+  * `YELLOW`
+  * `GREEN`
+* State transitions depend on:
 
-```
-Traffic-Light-Controller/
-│
-├── rtl/
-│   └── traffic_light_fsm.v
-│
-├── sim/
-│   └── tb_traffic_light.v
-│
-├── results/
-│   └── waveform.png
-│
-└── README.md
-```
+  * Clock signal
+  * Counter value
 
 ---
 
-## 🔗 Source Code
+### 🔹 Timing Mechanism
 
-* 🔹 [RTL Code (traffic_light_fsm.v)](./rtl/traffic_light_fsm.v)
-* 🔹 [Testbench (tb_traffic_light.v)](./sim/tb_traffic_light.v)
+* A **4-bit counter** generates timing delays
+* Each state persists for predefined clock cycles:
+
+  * RED → long duration
+  * GREEN → long duration
+  * YELLOW → shorter duration
+
+---
+
+### 🔹 Code Structure
+
+#### ✔ Sequential Block
+
+* Triggered on `posedge clk`
+* Handles:
+
+  * State update
+  * Reset condition
+  * Counter increment
+
+#### ✔ Combinational Block
+
+* Determines:
+
+  * Next state
+  * Output signals (r, y, g)
+* Includes **default assignments** to avoid latches
+
+---
+
+## 📂 Project Files
+
+* 🔹 [RTL Design (trafficlight.v)](./trafficlight.v)
+* 🔹 [Testbench (tb_trafficlight.v)](./tb_trafficlight.v)
+* 🔹 [Simulation Waveform](./trafficlight_simulation.png)
 
 ---
 
 ## 🧪 Simulation
 
-Simulation was performed using **Xilinx Vivado**.
+Simulation performed using **Xilinx Vivado**.
 
 ### ✔ Observations:
 
-* Proper state transitions observed
-* Outputs follow correct sequence:
+* Correct FSM transitions observed
+* Output sequence verified:
 
-RED → YELLOW → GREEN → RED
-
-
-* Timing controlled via counter (no delay statements)
-
----
-
-## 📸 Simulation Waveform
-
-> Add your waveform screenshot below:
-
-![Waveform](./results/waveform.png)
+  ```
+  RED → YELLOW → GREEN → RED
+  ```
+* Timing controlled using counter (no `#delay`)
 
 ---
 
-## ⚠️ Key Highlights
+## 📸 Waveform Output
 
-* ✔ Fully **synthesizable design**
-* ✔ No use of `#delay` (hardware-accurate)
-* ✔ Proper **FSM modeling (2 always blocks)**
-* ✔ Clean separation of logic and timing
+![Simulation Waveform](./trafficlight_simulation.png)
 
+---
+
+## ⚙️ Key Features
+
+* ✔ Fully **synthesizable Verilog design**
+* ✔ No use of simulation-only delays
+* ✔ Proper **FSM implementation (2-process design)**
+* ✔ Counter-based timing control
+* ✔ Clean and modular structure
+
+---
+
+## 🚀 Future Enhancements
+
+* 🚦 Dual-road traffic controller (North-South / East-West)
+* 🚶 Pedestrian crossing integration
+* 🚨 Emergency vehicle priority system
+* ⏱ Real-time clock-based timing (clock divider)
+
+---
 
 ## 🏁 Conclusion
 
-This project demonstrates a **fundamental digital design concept** using FSM and highlights the importance of **timing control in hardware systems**.
+This project demonstrates the implementation of a **real-world digital control system** using FSM and counters.
+It emphasizes **hardware-accurate design methodology**, which is essential for FPGA and VLSI applications.
 
 ---
 
+
+---
