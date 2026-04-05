@@ -1,56 +1,47 @@
-timescale 1ns/1ps
-
-module upcount_tb;
-
-reg clk;
-reg ld;
-reg rst;
+`timescale 1ns / 1ps
+ 
+module tb;
+ 
+reg clk =0, rst = 0;
+reg ld = 0;
 reg [3:0] ldvalue;
 wire [3:0] dout;
-
-// Instantiate your module
-upcount uut (
-    .clk(clk),
-    .ld(ld),
-    .rst(rst),
-    .ldvalue(ldvalue),
-    .dout(dout)
-);
-
-// Clock generation (10ns period)
+integer i =0;
+ 
+counter dut (clk, rst, ld, ldvalue, dout);
+ 
 always #5 clk = ~clk;
-
+ 
 initial begin
-    // Initialize
-    clk = 0;
-    rst = 1;
-    ld = 0;
-    ldvalue = 4'b0000;
-
-    // Apply reset
-    #10 rst = 0;
-
-    // Let it count
-    #40;
-
-    // Load a value
-    ld = 1;
-    ldvalue = 4'b1010;   // load 10
-    #10;
-
-    ld = 0;
-
-    // Continue counting
-    #50;
-
-    // Reset again
-    rst = 1;
-    #10;
-    rst = 0;
-
-    #30;
-
-    $stop;
+rst = 1'b1;
+#50;
+rst = 1'b0;
 end
-
+ 
+task counter_test;
+begin
+@(posedge clk);
+ld = 1'b1;
+ldvalue = $urandom();
+@(posedge clk);
+ld = 1'b0;
+repeat(10) @(posedge clk);
+end
+endtask
+ 
+initial begin
+#50;
+for(i =0; i < 5; i = i+ 1)
+begin
+counter_test();
+end
+end
+ 
+ 
+ 
+initial begin
+#650;
+$finish();
+end
+ 
 endmodule
